@@ -11,7 +11,7 @@ if __name__ == '__main__':
     # local[*] means use all available cores
     spark = SparkSession.builder \
         .master("local[2]") \
-        .appName("app1") \
+        .appName("cache-timing") \
         .config("spark.some.config.option", "some-value") \
         .getOrCreate()
 
