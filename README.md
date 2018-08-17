@@ -28,9 +28,9 @@ In your PyCharm project go to:
 
 Add Content Root
 
-Add: path to <unzipped spark distro>/python
+Add: path to **unzipped spark distro**/python
 
-Add: path to <unzipped spark distro>/python/lib/py4j-0.10.7-src.zip
+Add: path to **unzipped spark distro**/python/lib/py4j-0.10.7-src.zip
 
 
 
