@@ -9,6 +9,8 @@ import random
 from os import path
 import os
 
+# TODO limit the groupby to the same limit as the number of words in the cloud.
+#
 """
 BEFORE running this spark application run the below command in terminal window
 
@@ -48,7 +50,7 @@ def create_word_cloud(pandas_df):
 
     if len(word_count_dict) > 2:
         # NOTE: stopwords are ignored for generate_from_frequencies
-        wordcloud = WordCloud(width=1000, height=860, max_words=600).generate_from_frequencies(word_count_dict)  # WordCloud().generate(text)
+        wordcloud = WordCloud(width=1000, height=860, max_words=300).generate_from_frequencies(word_count_dict)  # WordCloud().generate(text)
         wordcloud.to_file(path.join(d, 'data', 'tweet_wc.png'))
 
 
