@@ -45,3 +45,21 @@ Then install PySpark
 ```pip install pyspark```
 
 
+
+## Spark Twitter WordCloud
+
+In this repo is a multiple process example:
+
+- TwitterListener.py
+
+    This python script creates a socket listener, a Twitter filter string and will listen for tweets that match the filter.  Once a process connects to the socket on port 9999, this process will start to send the tweet text.
+
+- streaming_socket.py
+
+    This python script creates a Structured Streaming application, using sockets, that will connect to port 9999, and read the tweet text and create a running word count from the tweets.  This process will also create a wordcloud image and write the image to the data directory.
+
+- WordCountHttpServer.py
+
+    This python script creates a simple HttpServer at port 4040 that will serve up the WordCloud image on refresh
+
+
